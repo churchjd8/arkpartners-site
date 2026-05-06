@@ -355,26 +355,6 @@
     .founder h4 { font-family: "Fraunces", serif; font-weight: 400; font-size: 30px; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 16px; }
     .founder p { font-family: "JetBrains Mono", monospace; font-size: 12.5px; line-height: 1.7; color: var(--soft); }
 
-    /* Pricing */
-    .pricing { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; }
-    @media (max-width: 900px) { .pricing { grid-template-columns: 1fr; } }
-    .tier { border: 1px solid var(--ink); padding: 40px 36px; position: relative; background: var(--paper); }
-    .tier.featured { background: var(--ink); color: var(--paper); }
-    .tier .tag { font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 20px; }
-    .tier.featured .tag { color: var(--teal-light); }
-    .tier h3 { font-family: "Fraunces", serif; font-weight: 400; font-size: 32px; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 8px; }
-    .tier .price { font-family: "JetBrains Mono", monospace; font-size: 16px; letter-spacing: 0.04em; margin-bottom: 4px; }
-    .tier .price .big { font-family: "Fraunces", serif; font-size: 36px; font-weight: 400; }
-    .tier .trial { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 24px; }
-    .tier.featured .trial { color: var(--teal-light); }
-    .tier .lede-mono { font-family: "Fraunces", serif; font-style: italic; font-size: 16px; line-height: 1.5; margin-bottom: 24px; }
-    .tier ul { list-style: none; display: grid; gap: 14px; margin-top: 18px; padding-top: 22px; border-top: 1px solid var(--rule); }
-    .tier.featured ul { border-top: 1px solid rgba(250,248,244,0.2); }
-    .tier li { font-family: "JetBrains Mono", monospace; font-size: 12.5px; line-height: 1.55; color: var(--soft); padding-left: 22px; position: relative; }
-    .tier.featured li { color: rgba(250,248,244,0.86); }
-    .tier li::before { content: '+'; position: absolute; left: 0; top: 1px; color: var(--teal-deep); font-weight: 700; }
-    .tier.featured li::before { color: var(--teal-light); }
-
     /* Closing CTA */
     .closing { padding: 140px 0 120px; text-align: center; }
     .closing .h-display { max-width: 880px; margin: 0 auto 40px; }
@@ -414,8 +394,8 @@
         <a href="#loop">The Loop</a>
         <a href="#cynthia">Cynthia</a>
         <a href="#approach">Approach</a>
-        <a href="#pricing">Pricing</a>
-        <a class="nav-cta" href="mailto:hello@arkpartners.ai">Get a Loop</a>
+        <a href="#founders">Team</a>
+        <a class="nav-cta" href="#book">Book a call</a>
       </div>
     </div>
   </nav>
@@ -436,8 +416,8 @@
             One agency.
           </h1>
           <div class="meta-row">
-            <a class="btn btn-primary" href="#loop">See the Daily Loop <span class="arrow">→</span></a>
-            <a class="btn btn-ghost" href="mailto:hello@arkpartners.ai">hello@arkpartners.ai</a>
+            <a class="btn btn-primary" href="#book">Book a free discovery call <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="#loop">See the Daily Loop</a>
           </div>
         </div>
         <aside class="hero-aside">
@@ -497,8 +477,15 @@
         </div>
         <div class="brief-foot">
           <span>Auto-generated · 06:58 PT</span>
-          <a class="cta" href="mailto:hello@arkpartners.ai">Open in Slack →</a>
+          <a class="cta" href="#book">Open in Slack →</a>
         </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 72px; padding-top: 48px; border-top: 1px solid rgba(250,248,244,0.18); display: block;">
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+        <p style="font-family: 'Fraunces', serif; font-size: 22px; font-style: italic; color: rgba(250,248,244,0.9); max-width: 540px; line-height: 1.4;">Want a Daily Loop running on your business? Let's see what it would say tomorrow morning.</p>
+        <a class="btn btn-primary" style="background: var(--teal-light); border-color: var(--teal-light); color: var(--ink);" href="#book">Book a free discovery call <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -686,59 +673,17 @@
     </div>
   </section>
 
-  <!-- ============== Pricing ============== -->
-  <section class="section" id="pricing" style="background: var(--paper-warm);">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow"><span class="bracket">[</span>07<span class="bracket">]</span> Engagement</span>
-        <div>
-          <h2 class="h-section">Low barrier in.<br />Compounding from there.</h2>
-          <p class="lede">Most prospects know AI matters and feel behind, but don't know what to buy. We meet you exactly there — start with the foundation, expand naturally as the wins stack up.</p>
-        </div>
-      </div>
-
-      <div class="pricing">
-        <div class="tier featured">
-          <div class="tag">Foundation · Recommended</div>
-          <h3>AI Foundation</h3>
-          <div class="price"><span class="big">$1,500</span> / month</div>
-          <div class="trial">First month $1,000 · $500 off trial</div>
-          <p class="lede-mono">Our rinse-and-repeat foundation for every client. ROI is immediate and obvious — we get you connected and running before month two.</p>
-          <ul>
-            <li>Cynthia in your Slack — your own AI employee. Voice, text, drafts, research, scheduling, analysis.</li>
-            <li>Your Company Brain (MCP server) — a centralized knowledge layer with your SOPs, brand docs, contracts, data. Every AI you open already knows you.</li>
-            <li>Data source connections — Google, Slack, CRM, analytics, whatever you run. So Cynthia can actually see your business.</li>
-            <li>Audit + recommendations — full analysis of where AI moves your needle, surfaced in your dashboard.</li>
-            <li>Dedicated Slack channel with our team for ongoing support, optimization, and training.</li>
-          </ul>
-        </div>
-        <div class="tier">
-          <div class="tag">Expansion</div>
-          <h3>Custom Projects</h3>
-          <div class="price"><span class="big">$2k–$5k+</span> / month</div>
-          <div class="trial">Scoped per engagement</div>
-          <p class="lede-mono">When you're ready to go deeper — outbound campaigns, custom dashboards, workflow automation, full CRM builds. We meet you where you are and scope accordingly.</p>
-          <ul>
-            <li>Custom AI agents purpose-built for your operation.</li>
-            <li>Outbound campaigns — built, sent, and optimized inside Cynthia Reach.</li>
-            <li>Workflow automation — replace whole processes end-to-end.</li>
-            <li>Custom dashboards and analytics layered on the Daily Loop.</li>
-            <li>Deeper integrations and ongoing engineering capacity.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============== Closing CTA ============== -->
-  <section class="closing" id="contact">
+  <section class="closing" id="book">
     <div class="container">
-      <span class="eyebrow"><span class="bracket">[</span>08<span class="bracket">]</span> Get on board</span>
-      <h2 class="h-display" style="margin-top: 22px;">A consulting agency without proprietary tech is just people billing hours.<br /><span class="accent">We're both.</span></h2>
-      <div class="contact-row">
+      <span class="eyebrow"><span class="bracket">[</span>07<span class="bracket">]</span> Book a discovery call</span>
+      <h2 class="h-display" style="margin-top: 22px;">30 minutes.<br />Zero pitch decks.<br /><span class="accent">A real look at where AI moves your business next.</span></h2>
+      <p class="lede" style="margin: 32px auto 40px; text-align: center;">No commitment. No slide deck. We'll get under the hood of your business, show you exactly where Cynthia would have the biggest impact in the first 30 days, and answer any question on the table.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px;">
+        <a class="btn btn-primary" href="mailto:hello@arkpartners.ai?subject=Discovery%20Call%20Request&amp;body=Hey%20ARK%20team%2C%0A%0AI'd%20like%20to%20book%20a%20free%20discovery%20call.%0A%0AName%3A%0ACompany%3A%0AWhat%20I'm%20trying%20to%20solve%3A%0ABest%20times%20to%20chat%3A%0A%0AThanks%2C%0A">Book your free discovery call <span class="arrow">→</span></a>
+      </div>
+      <div class="contact-row" style="margin-top: 32px;">
         <a href="mailto:hello@arkpartners.ai">hello@arkpartners.ai</a>
-        <span style="opacity: .5;">·</span>
-        <a href="mailto:hello@arkpartners.ai">Book a discovery call</a>
       </div>
     </div>
   </section>
