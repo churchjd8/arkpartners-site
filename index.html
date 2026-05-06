@@ -391,6 +391,87 @@
     .founder h4 { font-family: "Fraunces", serif; font-weight: 400; font-size: 30px; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 16px; }
     .founder p { font-family: "JetBrains Mono", monospace; font-size: 12.5px; line-height: 1.7; color: var(--soft); }
 
+    /* Success stories */
+    .stories { background: var(--paper-warm); }
+    .story-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    @media (max-width: 980px) { .story-grid { grid-template-columns: 1fr; } }
+
+    .story {
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 32px 28px 28px;
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .story:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(20,20,20,0.08); }
+
+    .story-head {
+      display: flex; gap: 14px; align-items: center;
+      padding-bottom: 18px; margin-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .story-mark {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--paper-warm);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700; font-size: 14px; letter-spacing: 0.04em;
+      color: var(--ink);
+      border: 1px solid var(--rule-strong);
+    }
+    .story-mark .br { color: var(--teal-deep); }
+    .story-name {
+      font-family: "Fraunces", serif; font-weight: 400; font-size: 21px;
+      letter-spacing: -0.01em; line-height: 1.1; color: var(--ink);
+    }
+    .story-role {
+      font-family: "JetBrains Mono", monospace; font-size: 10px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .story-stars {
+      color: var(--gold); font-size: 14px; letter-spacing: 4px; margin-bottom: 16px;
+    }
+    .story-tags {
+      list-style: none; display: flex; gap: 8px; flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+    .story-tags li {
+      font-family: "JetBrains Mono", monospace; font-size: 9.5px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 5px 10px; background: var(--paper-warm);
+      border: 1px solid var(--rule-strong); color: var(--soft);
+    }
+    .story-quote {
+      font-family: "Fraunces", serif; font-size: 17px; font-style: italic;
+      line-height: 1.5; color: var(--soft);
+      padding-left: 14px; border-left: 2px solid var(--teal-deep);
+      margin-bottom: 18px;
+    }
+    .story-result {
+      font-family: "JetBrains Mono", monospace; font-size: 12px;
+      line-height: 1.55; color: var(--ink); font-weight: 500;
+      padding: 14px 0; border-top: 1px solid var(--rule);
+      margin-top: auto;
+    }
+    .story-link {
+      margin-top: 14px;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
+      color: var(--teal-deep);
+      display: inline-flex; align-items: center; gap: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      align-self: flex-start;
+      transition: border-color .2s ease;
+    }
+    .story-link:hover { border-bottom-color: var(--teal-deep); }
+
     /* Closing CTA */
     .closing { padding: 140px 0 120px; text-align: center; }
     .closing .h-display { max-width: 880px; margin: 0 auto 40px; }
@@ -430,6 +511,7 @@
         <a href="#brief">Morning Brief</a>
         <a href="#cynthia">Cynthia</a>
         <a href="#approach">Approach</a>
+        <a href="#stories">Stories</a>
         <a href="#founders">Team</a>
         <a class="nav-cta" href="#book">Book a call</a>
       </div>
@@ -708,10 +790,84 @@
     </div>
   </section>
 
+  <!-- ============== Success Stories ============== -->
+  <section class="section stories" id="stories">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="bracket">[</span>07<span class="bracket">]</span> Our customers</span>
+        <div>
+          <h2 class="h-section">Real businesses.<br />Real results.</h2>
+          <p class="lede">Founders who plugged Cynthia in and watched the leverage compound. Three of them, told the way they tell it.</p>
+        </div>
+      </div>
+
+      <div class="story-grid">
+
+        <article class="story">
+          <header class="story-head">
+            <div class="story-mark"><span class="br">[</span>CC<span class="br">]</span></div>
+            <div>
+              <div class="story-name">Conscious Counsel</div>
+              <div class="story-role">Legal services &amp; wellness</div>
+            </div>
+          </header>
+          <div class="story-stars" aria-label="Five stars">★★★★★</div>
+          <ul class="story-tags">
+            <li>Meta Ads</li>
+            <li>AI SDR</li>
+            <li>Video Content</li>
+          </ul>
+          <p class="story-quote">"We went from 1,400 leads and zero customers to a system that actually books calls and closes deals. The AI handles everything."</p>
+          <div class="story-result">Full AI marketing &amp; sales engine deployed.</div>
+          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
+        </article>
+
+        <article class="story">
+          <header class="story-head">
+            <div class="story-mark"><span class="br">[</span>AC<span class="br">]</span></div>
+            <div>
+              <div class="story-name">Affextionate Cuizine</div>
+              <div class="story-role">Catering &amp; events</div>
+            </div>
+          </header>
+          <div class="story-stars" aria-label="Five stars">★★★★★</div>
+          <ul class="story-tags">
+            <li>Google SEO</li>
+            <li>Pipeline</li>
+            <li>AI Proposals</li>
+          </ul>
+          <p class="story-quote">"Every inquiry gets handled instantly and proposals go out the same day. I just focus on the food now."</p>
+          <div class="story-result">$48K+ in active pipeline · &lt; 60s response time.</div>
+          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
+        </article>
+
+        <article class="story">
+          <header class="story-head">
+            <div class="story-mark"><span class="br">[</span>LH<span class="br">]</span></div>
+            <div>
+              <div class="story-name">Legal Halp</div>
+              <div class="story-role">Legal services</div>
+            </div>
+          </header>
+          <div class="story-stars" aria-label="Five stars">★★★★★</div>
+          <ul class="story-tags">
+            <li>Website</li>
+            <li>Meta Ads</li>
+            <li>AI SDR</li>
+          </ul>
+          <p class="story-quote">"They built my entire digital presence in days. All I do now is show up for consultations and do actual legal work."</p>
+          <div class="story-result">$17.95 cost per lead · 500+ businesses served.</div>
+          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============== Closing CTA ============== -->
   <section class="closing" id="book">
     <div class="container">
-      <span class="eyebrow"><span class="bracket">[</span>07<span class="bracket">]</span> Book a discovery call</span>
+      <span class="eyebrow"><span class="bracket">[</span>08<span class="bracket">]</span> Book a discovery call</span>
       <h2 class="h-display" style="margin-top: 22px;">30 minutes.<br />Zero pitch decks.<br /><span class="accent">A real look at where AI moves your business next.</span></h2>
       <p class="lede" style="margin: 32px auto 40px; text-align: center;">No commitment. No slide deck. We'll get under the hood of your business, show you exactly where Cynthia would have the biggest impact in the first 30 days, and answer any question on the table.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px;">
@@ -734,7 +890,7 @@
 
   <script>
     // Subtle reveal on scroll
-    const els = document.querySelectorAll('.h-section, .lede, .product, .outcome, .step, .diff-item, .founder, .tier, .brief, .loop-point');
+    const els = document.querySelectorAll('.h-section, .lede, .product, .outcome, .step, .diff-item, .founder, .story, .brief, .loop-point, .cynthia-title');
     els.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
