@@ -408,6 +408,22 @@
     .diff-item p { font-family: "JetBrains Mono", monospace; font-size: 12px; line-height: 1.65; color: var(--soft); }
 
     /* Founders */
+    .founder-eq {
+      margin-top: 16px;
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-size: clamp(17px, 1.3vw, 20px);
+      line-height: 1.5;
+      color: var(--teal-deep);
+      max-width: 660px;
+    }
+    .founder-eq .op {
+      font-family: "JetBrains Mono", monospace;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--gold);
+      padding: 0 2px;
+    }
     .founders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     @media (max-width: 900px) { .founders { grid-template-columns: 1fr; } }
     .founder {
@@ -872,8 +888,9 @@
       <div class="section-head">
         <span class="eyebrow"><span class="bracket">[</span>06<span class="bracket">]</span> The founders</span>
         <div>
-          <h2 class="h-section">AI doesn't run businesses.<br />People do.</h2>
-          <p class="lede">Three founders who've actually run companies — embedded in yours, building with you.</p>
+          <h2 class="h-section">AI is the engine.<br /><span class="accent">Operators</span> are the steering wheel.</h2>
+          <p class="lede">Three founders who've driven this road before. Now riding shotgun with you.</p>
+          <p class="founder-eq">Human strategy <span class="op">+</span> artificial intelligence <span class="op">=</span> maximum impact, real ROI.</p>
         </div>
       </div>
 
