@@ -71,6 +71,7 @@
       color: var(--ink);
     }
     .h-display .accent { color: var(--teal-deep); font-style: italic; }
+    .h-section .accent { color: var(--teal-light); font-style: italic; }
     .h-section {
       font-family: "Fraunces", serif;
       font-weight: 400;
@@ -133,8 +134,8 @@
       border-bottom: 1px solid var(--ink);
       overflow: hidden;
       background:
-        radial-gradient(900px 520px at 88% -10%, rgba(58, 168, 158, 0.18), transparent 60%),
-        radial-gradient(720px 480px at -8% 110%, rgba(184, 137, 58, 0.16), transparent 62%),
+        radial-gradient(1000px 580px at 92% -12%, rgba(58, 168, 158, 0.32), transparent 62%),
+        radial-gradient(820px 540px at -10% 115%, rgba(184, 137, 58, 0.28), transparent 64%),
         var(--paper);
     }
     .hero::before {
@@ -760,7 +761,7 @@
       <div class="section-head">
         <span class="eyebrow"><span class="bracket">[</span>03<span class="bracket">]</span> What you actually get</span>
         <div>
-          <h2 class="h-section">Your business runs.<br />We help it run faster, cheaper, smarter.</h2>
+          <h2 class="h-section">Your business runs.<br />We help it run <span class="accent">faster, cheaper, smarter</span>.</h2>
           <p class="lede">More revenue. Less busywork. Smarter decisions.</p>
         </div>
       </div>
