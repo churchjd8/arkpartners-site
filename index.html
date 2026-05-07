@@ -403,11 +403,37 @@
     .founders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     @media (max-width: 900px) { .founders { grid-template-columns: 1fr; } }
     .founder {
-      padding: 36px 28px 32px;
+      padding: 0 0 32px;
       border: 1px solid var(--ink);
       background: var(--paper);
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
+    .founder-portrait {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      overflow: hidden;
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--ink);
+    }
+    .founder-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      display: block;
+      filter: grayscale(0.18) contrast(1.02);
+      transition: filter .35s ease, transform .6s ease;
+    }
+    .founder:hover .founder-portrait img {
+      filter: grayscale(0) contrast(1.02);
+      transform: scale(1.02);
+    }
+    .founder .role,
+    .founder h4,
+    .founder p { padding-left: 28px; padding-right: 28px; }
+    .founder .role { padding-top: 28px; }
     .founder .role {
       font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
       color: var(--teal-deep); margin-bottom: 16px;
@@ -845,16 +871,19 @@
 
       <div class="founders">
         <div class="founder">
+          <div class="founder-portrait"><img src="/assets/team/ricki.jpg" alt="Ricki Bodner" loading="lazy" /></div>
           <div class="role">Co-founder · CTO</div>
           <h4>Ricki Bodner</h4>
           <p>The architect behind Cynthia. Built multiple 7-figure companies in the online space. Designed and built the entire Cynthia platform from scratch — AI infrastructure, product suite, server architecture, all of it. Leads all technical delivery and product. When you hire ARK, Ricki is the one building and deploying the systems that run your business.</p>
         </div>
         <div class="founder">
+          <div class="founder-portrait"><img src="/assets/team/chad.jpg" alt="Chad Sonkin" loading="lazy" /></div>
           <div class="role">Co-founder · Head of Sales</div>
           <h4>Chad Sonkin</h4>
           <p>Tens of millions in career sales. Has led organizations of dozens of sales leaders. Speaker and coach focused on energy management and how to become "uncommon." Owns the ARK pipeline and works directly with clients to scope the solution that actually fits.</p>
         </div>
         <div class="founder">
+          <div class="founder-portrait"><img src="/assets/team/joshua.jpg" alt="Joshua Church" loading="lazy" /></div>
           <div class="role">Co-founder · CEO</div>
           <h4>Joshua Church</h4>
           <p>Forbes 30 Under 30. EY Entrepreneur of the Year finalist. Built Edge Theory Labs from a garage prototype to a $20M+ company in under three years. Author, podcast host, and strategic consultant to high-performing CEOs. Joshua provides delivery, organization, and strategic direction across the firm.</p>
