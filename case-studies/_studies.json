@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "conscious-counsel",
+    "initials": "CC",
+    "industry": "Legal Services & Wellness",
+    "name": "Conscious Counsel",
+    "subtitle": "How we used AI to run Meta ad campaigns, handle all inbound SDR work, create video content, and optimize ad performance for a legal templates company serving wellness businesses.",
+    "result": "Full AI marketing & sales engine deployed.",
+    "tags": [
+      "Meta Ads",
+      "AI SDR",
+      "Video Content"
+    ]
+  },
+  {
+    "slug": "affextionate-cuizine",
+    "initials": "AC",
+    "industry": "Catering & Events",
+    "name": "Affextionate Cuizine",
+    "subtitle": "How we used AI to optimize Google SEO, automate the entire booking pipeline, and handle every inbound inquiry for an Atlanta catering company \u2014 from first touch to signed proposal.",
+    "result": "$48K+ active pipeline \u00b7 &lt; 60s response time.",
+    "tags": [
+      "Google SEO",
+      "Pipeline",
+      "AI Proposals"
+    ]
+  },
+  {
+    "slug": "legal-intake",
+    "initials": "LH",
+    "industry": "Legal Services",
+    "name": "Legal Halp",
+    "subtitle": "How we built a complete digital presence from scratch \u2014 website, Meta ad funnels, AI-powered SDR, and automated appointment booking \u2014 so all the lawyer has to do is lawyer work.",
+    "result": "$17.95 cost per lead \u00b7 500+ businesses served.",
+    "tags": [
+      "Website",
+      "Meta Ads",
+      "AI SDR"
+    ]
+  },
+  {
+    "slug": "sereia-official",
+    "initials": "SO",
+    "industry": "Ecommerce & DTC",
+    "name": "Sereia Official",
+    "subtitle": "How we used AI to completely restructure ad targeting for a jewelry ecommerce brand \u2014 turning a 0.09x ROAS into a profitable campaign in two days.",
+    "result": "Unprofitable \u2192 profitable in 48 hours.",
+    "tags": [
+      "Ad Audit",
+      "Targeting",
+      "ROAS"
+    ]
+  },
+  {
+    "slug": "executive-recruiting",
+    "initials": "R",
+    "industry": "Recruiting & Staffing",
+    "name": "PE Recruiting Firm",
+    "subtitle": "How we built an AI candidate sourcing system that found 30+ qualified C-suite candidates in 24 hours for a private equity recruiting firm.",
+    "result": "30+ executive candidates in 24 hours.",
+    "tags": [
+      "AI Sourcing",
+      "Recruiting",
+      "Pipeline"
+    ]
+  },
+  {
+    "slug": "ai-meeting-coach",
+    "initials": "M",
+    "industry": "Sales Enablement",
+    "name": "Cynthia Meet",
+    "subtitle": "How we built AI-powered video meetings with real-time sales coaching, automatic transcription, and instant CRM updates.",
+    "result": "40% improvement in close rate.",
+    "tags": [
+      "Meet",
+      "Coaching",
+      "CRM Sync"
+    ]
+  },
+  {
+    "slug": "philly-basketball",
+    "initials": "PB",
+    "industry": "Youth Sports & Education",
+    "name": "Philadelphia Basketball School",
+    "subtitle": "How we built an AI sales rep that handles every parent inquiry, follows up on trial sign-ups, and converts them into paying members \u2014 so the coach can focus on coaching.",
+    "result": "200+ kids enrolled \u00b7 562 messages automated.",
+    "tags": [
+      "AI SDR",
+      "Enrollment",
+      "Follow-up"
+    ]
+  },
+  {
+    "slug": "voice-erp",
+    "initials": "VE",
+    "industry": "B2B SaaS & Logistics",
+    "name": "Voice ERP (Viki)",
+    "subtitle": "How we built a full marketing engine \u2014 paid ads, landing pages, ad creative, and analytics \u2014 for a B2B SaaS startup selling AI voice dispatching to Amazon DSP companies.",
+    "result": "Full marketing stack deployed.",
+    "tags": [
+      "Paid Ads",
+      "Landing Pages",
+      "Analytics"
+    ]
+  },
+  {
+    "slug": "sides-bbq",
+    "initials": "SB",
+    "industry": "Food Service & Catering",
+    "name": "Sides BBQ and Catering",
+    "subtitle": "How we used AI to get a 40-year catering company visible on Google and automate their entire lead response process.",
+    "result": "First Google rankings after 40 years.",
+    "tags": [
+      "Local SEO",
+      "Lead Auto",
+      "GMB"
+    ]
+  },
+  {
+    "slug": "beverly-hills-wellness",
+    "initials": "BH",
+    "industry": "Healthcare & Wellness",
+    "name": "Beverly Hills Naturopathic Practice",
+    "subtitle": "How we set up HIPAA-compliant AI operations for a naturopathic doctor \u2014 so she can focus on patients while AI handles scheduling, compliance, and practice management.",
+    "result": "HIPAA compliant \u00b7 10+ hrs/week saved.",
+    "tags": [
+      "HIPAA",
+      "Intake",
+      "Scheduling"
+    ]
+  },
+  {
+    "slug": "allied-exteriors",
+    "initials": "AE",
+    "industry": "Construction & Contracting",
+    "name": "Allied Exteriors",
+    "subtitle": "How we used AI to identify high-value prospects and build personalized outreach for a construction contractor targeting enterprise clients in Greater Boston.",
+    "result": "5+ enterprise prospects with personalized outreach.",
+    "tags": [
+      "B2B Outreach",
+      "Personalization",
+      "Construction"
+    ]
+  }
+]

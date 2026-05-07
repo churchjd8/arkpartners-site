@@ -407,6 +407,49 @@
     }
     @media (max-width: 980px) { .story-grid { grid-template-columns: 1fr; } }
 
+    /* Horizontal scroll carousel for the homepage stories strip */
+    .story-scroll-wrap { position: relative; }
+    .story-scroll {
+      display: flex; gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left: 4px;
+      padding: 4px 4px 28px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--rule-strong) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+    .story-scroll::-webkit-scrollbar { height: 8px; }
+    .story-scroll::-webkit-scrollbar-track { background: transparent; }
+    .story-scroll::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 4px; }
+    .story-scroll .story {
+      flex: 0 0 360px;
+      max-width: 360px;
+      scroll-snap-align: start;
+    }
+    @media (max-width: 560px) {
+      .story-scroll .story { flex: 0 0 88vw; max-width: 88vw; }
+    }
+    .story-nav {
+      display: flex; gap: 10px; justify-content: flex-end; align-items: center;
+      margin-top: 12px;
+    }
+    .story-nav-btn {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--paper); border: 1px solid var(--ink); cursor: pointer;
+      transition: background .15s ease, color .15s ease;
+      color: var(--ink); font-family: "JetBrains Mono", monospace;
+    }
+    .story-nav-btn:hover { background: var(--ink); color: var(--paper); }
+    .story-all {
+      margin-right: auto;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
+      color: var(--ink); border-bottom: 1px solid var(--teal-deep); padding-bottom: 3px;
+    }
+    .story-all:hover { color: var(--teal-deep); }
+
     .story {
       background: var(--paper);
       border: 1px solid var(--ink);
@@ -521,7 +564,7 @@
         <a href="#brief">Morning Brief</a>
         <a href="#cynthia">Cynthia</a>
         <a href="#approach">Approach</a>
-        <a href="#stories">Stories</a>
+        <a href="/case-studies/">Case studies</a>
         <a href="#founders">Team</a>
         <a class="nav-cta" href="#book">Book a call</a>
       </div>
@@ -809,65 +852,169 @@
         <p class="lede">Real businesses share how we built custom AI solutions that transformed their operations and boosted results.</p>
       </div>
 
-      <div class="story-grid">
+      <div class="story-scroll-wrap">
+        <div class="story-scroll" id="storyScroll">
+          <a href="/case-studies/conscious-counsel/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>CC<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Conscious Counsel</div>
+                <div class="story-role">Legal Services &amp; Wellness</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Meta Ads</li><li>AI SDR</li><li>Video Content</li></ul>
+            <p class="story-quote">"We went from 1,400 leads and zero customers to a system that actually books calls and closes deals. The AI handles everything I used to spend my whole day doing."</p>
+            <div class="story-result">Full AI marketing &amp; sales engine deployed.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/affextionate-cuizine/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>AC<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Affextionate Cuizine</div>
+                <div class="story-role">Catering &amp; Events</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Google SEO</li><li>Pipeline</li><li>AI Proposals</li></ul>
+            <p class="story-quote">"I used to lose bookings because I couldn&#x27;t respond fast enough while prepping for events. Now every inquiry gets handled instantly and proposals go out the same day. I just focus on the food."</p>
+            <div class="story-result">$48K+ active pipeline · &lt; 60s response time.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/legal-intake/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>LH<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Legal Halp</div>
+                <div class="story-role">Legal Services</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Website</li><li>Meta Ads</li><li>AI SDR</li></ul>
+            <p class="story-quote">"They built my entire digital presence in days. Website, ads, lead capture, follow-up sequences — all I do now is show up for consultations and do actual legal work. Everything else runs itself."</p>
+            <div class="story-result">$17.95 cost per lead · 500+ businesses served.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/sereia-official/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>SO<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Sereia Official</div>
+                <div class="story-role">Ecommerce &amp; DTC</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Ad Audit</li><li>Targeting</li><li>ROAS</li></ul>
+            <p class="story-quote">"We were literally burning money. They found the problem in hours, fixed our targeting, and we went from losing money to profitable in two days. Should have done this months ago."</p>
+            <div class="story-result">Unprofitable → profitable in 48 hours.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/executive-recruiting/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>R<span class="br">]</span></div>
+              <div>
+                <div class="story-name">PE Recruiting Firm</div>
+                <div class="story-role">Recruiting &amp; Staffing</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>AI Sourcing</li><li>Recruiting</li><li>Pipeline</li></ul>
+            <p class="story-quote">"We spent hours researching just to find five quality candidates. This found 30 in a day — with better data than we&#x27;d ever seen from LinkedIn."</p>
+            <div class="story-result">30+ executive candidates in 24 hours.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/ai-meeting-coach/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>M<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Cynthia Meet</div>
+                <div class="story-role">Sales Enablement</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Meet</li><li>Coaching</li><li>CRM Sync</li></ul>
+            <p class="story-quote">"It&#x27;s like having a sales manager whispering in your ear during every call. Our reps leveled up overnight and the data we get from each call is incredible."</p>
+            <div class="story-result">40% improvement in close rate.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/philly-basketball/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>PB<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Philadelphia Basketball School</div>
+                <div class="story-role">Youth Sports &amp; Education</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>AI SDR</li><li>Enrollment</li><li>Follow-up</li></ul>
+            <p class="story-quote">"I was losing kids because I couldn&#x27;t text parents back fast enough while I&#x27;m running practice. Now every parent gets an instant response and the AI handles everything from trial sign-up to payment."</p>
+            <div class="story-result">200+ kids enrolled · 562 messages automated.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/voice-erp/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>VE<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Voice ERP (Viki)</div>
+                <div class="story-role">B2B SaaS &amp; Logistics</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Paid Ads</li><li>Landing Pages</li><li>Analytics</li></ul>
+            <p class="story-quote">"We had a great product but no way to get it in front of the right people. They built our entire marketing engine — ads, landing pages, creative, analytics — and now we have a real pipeline."</p>
+            <div class="story-result">Full marketing stack deployed.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/sides-bbq/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>SB<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Sides BBQ and Catering</div>
+                <div class="story-role">Food Service &amp; Catering</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>Local SEO</li><li>Lead Auto</li><li>GMB</li></ul>
+            <p class="story-quote">"I&#x27;ve been doing this 40 years and never showed up on Google. Now I&#x27;m getting found and every lead gets handled instantly. No BS, just results — which is all I asked for."</p>
+            <div class="story-result">First Google rankings after 40 years.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/beverly-hills-wellness/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>BH<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Beverly Hills Naturopathic</div>
+                <div class="story-role">Healthcare &amp; Wellness</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>HIPAA</li><li>Intake</li><li>Scheduling</li></ul>
+            <p class="story-quote">"I was spending half my day on admin instead of patients. Now the AI handles scheduling, intake, and follow-ups — and I don&#x27;t have to worry about HIPAA because they set everything up properly."</p>
+            <div class="story-result">HIPAA compliant · 10+ hrs/week saved.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+          <a href="/case-studies/allied-exteriors/" class="story">
+            <header class="story-head">
+              <div class="story-mark"><span class="br">[</span>AE<span class="br">]</span></div>
+              <div>
+                <div class="story-name">Allied Exteriors</div>
+                <div class="story-role">Construction &amp; Contracting</div>
+              </div>
+            </header>
+            <div class="story-stars" aria-label="Five stars">★★★★★</div>
+            <ul class="story-tags"><li>B2B Outreach</li><li>Personalization</li><li>Construction</li></ul>
+            <p class="story-quote">"I went from cold calling front desks to having personalized messages going to the exact person who makes the decision. The AI found opportunities I never would have known about."</p>
+            <div class="story-result">5+ enterprise prospects with personalized outreach.</div>
+            <span class="story-link">Read case study <span class="arrow">→</span></span>
+          </a>
+        </div>
 
-        <article class="story">
-          <header class="story-head">
-            <div class="story-mark"><span class="br">[</span>CC<span class="br">]</span></div>
-            <div>
-              <div class="story-name">Conscious Counsel</div>
-              <div class="story-role">Legal services &amp; wellness</div>
-            </div>
-          </header>
-          <div class="story-stars" aria-label="Five stars">★★★★★</div>
-          <ul class="story-tags">
-            <li>Meta Ads</li>
-            <li>AI SDR</li>
-            <li>Video Content</li>
-          </ul>
-          <p class="story-quote">"We went from 1,400 leads and zero customers to a system that actually books calls and closes deals. The AI handles everything."</p>
-          <div class="story-result">Full AI marketing &amp; sales engine deployed.</div>
-          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
-        </article>
-
-        <article class="story">
-          <header class="story-head">
-            <div class="story-mark"><span class="br">[</span>AC<span class="br">]</span></div>
-            <div>
-              <div class="story-name">Affextionate Cuizine</div>
-              <div class="story-role">Catering &amp; events</div>
-            </div>
-          </header>
-          <div class="story-stars" aria-label="Five stars">★★★★★</div>
-          <ul class="story-tags">
-            <li>Google SEO</li>
-            <li>Pipeline</li>
-            <li>AI Proposals</li>
-          </ul>
-          <p class="story-quote">"Every inquiry gets handled instantly and proposals go out the same day. I just focus on the food now."</p>
-          <div class="story-result">$48K+ in active pipeline · &lt; 60s response time.</div>
-          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
-        </article>
-
-        <article class="story">
-          <header class="story-head">
-            <div class="story-mark"><span class="br">[</span>LH<span class="br">]</span></div>
-            <div>
-              <div class="story-name">Legal Halp</div>
-              <div class="story-role">Legal services</div>
-            </div>
-          </header>
-          <div class="story-stars" aria-label="Five stars">★★★★★</div>
-          <ul class="story-tags">
-            <li>Website</li>
-            <li>Meta Ads</li>
-            <li>AI SDR</li>
-          </ul>
-          <p class="story-quote">"They built my entire digital presence in days. All I do now is show up for consultations and do actual legal work."</p>
-          <div class="story-result">$17.95 cost per lead · 500+ businesses served.</div>
-          <a class="story-link" href="#book">Talk to us about your case <span class="arrow">→</span></a>
-        </article>
-
+        <div class="story-nav">
+          <a class="story-all" href="/case-studies/">See all 11 case studies →</a>
+          <button class="story-nav-btn" onclick="document.getElementById('storyScroll').scrollBy({left:-380,behavior:'smooth'})" aria-label="Previous story">←</button>
+          <button class="story-nav-btn" onclick="document.getElementById('storyScroll').scrollBy({left:380,behavior:'smooth'})" aria-label="Next story">→</button>
+        </div>
       </div>
     </div>
   </section>
