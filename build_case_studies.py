@@ -129,7 +129,7 @@ NAV_HTML = """\
       <div class="nav-links">
         <a href="/#brief">Morning Brief</a>
         <a href="/#cynthia">Cynthia</a>
-        <a href="/case-studies/">Case studies</a>
+        <a href="/#stories">Case studies</a>
         <a class="nav-cta" href="/#book">Book a call</a>
       </div>
     </div>
