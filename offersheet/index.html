@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARK Partners — Offer Sheet</title>
+  <meta name="description" content="The ARK Stack — how we move four numbers in your business. Internal offer sheet for partners and prospects." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/assets/ark-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,30..100&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" />
+  <style>
+    :root {
+      --ink: #141414;
+      --ink-soft: #2a2a2a;
+      --paper: #FAF8F4;
+      --paper-warm: #F4EFE6;
+      --teal-deep: #0d4f4a;
+      --teal-light: #3aa89e;
+      --gold: #b8893a;
+      --gold-soft: #d4a85a;
+      --navy: #2a3f5f;
+      --rose: #c4828a;
+      --rule: rgba(20,20,20,0.14);
+      --rule-strong: rgba(20,20,20,0.28);
+      --muted: #6b6b6b;
+      --soft: #3d3d3d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+    @media (max-width: 720px) { .container { padding: 0 22px; } }
+
+    .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      font-weight: 500;
+    }
+
+    .h-display {
+      font-family: "Fraunces", serif;
+      font-weight: 300;
+      font-size: clamp(40px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+    .h-display .accent { color: var(--teal-deep); font-style: italic; }
+
+    .lede {
+      font-family: "Fraunces", serif;
+      font-size: clamp(18px, 1.5vw, 22px);
+      line-height: 1.5;
+      color: var(--soft);
+      max-width: 720px;
+    }
+
+    /* ============== Header ============== */
+    .header {
+      padding: 88px 0 56px;
+      border-bottom: 1px solid var(--ink);
+      background:
+        radial-gradient(900px 540px at 92% -16%, rgba(58, 168, 158, 0.26), transparent 62%),
+        radial-gradient(700px 460px at -10% 120%, rgba(184, 137, 58, 0.22), transparent 64%),
+        var(--paper);
+    }
+    .header .eyebrow { margin-bottom: 22px; }
+    .header h1 { margin-bottom: 22px; }
+    .header .meta {
+      margin-top: 40px;
+      display: flex; gap: 32px; flex-wrap: wrap;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .header .meta span strong { color: var(--ink); font-weight: 600; }
+
+    /* ============== Foundation note ============== */
+    .foundation-note {
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--ink);
+      padding: 36px 0;
+    }
+    .foundation-note .inner {
+      display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center;
+    }
+    @media (max-width: 720px) {
+      .foundation-note .inner { grid-template-columns: 1fr; gap: 14px; }
+    }
+    .foundation-note .label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--teal-deep); font-weight: 600;
+      padding: 8px 14px; border: 1px solid var(--teal-deep);
+      white-space: nowrap;
+    }
+    .foundation-note .body {
+      font-family: "Fraunces", serif;
+      font-size: 17px; line-height: 1.55; color: var(--ink-soft);
+    }
+    .foundation-note .body strong { font-weight: 500; color: var(--ink); }
+
+    /* ============== Pillar grid ============== */
+    .stack { padding: 80px 0; }
+    .stack-header {
+      margin-bottom: 56px;
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end;
+    }
+    @media (max-width: 880px) { .stack-header { grid-template-columns: 1fr; gap: 24px; } }
+    .stack-header .h-section {
+      font-family: "Fraunces", serif; font-weight: 400;
+      font-size: clamp(32px, 4.2vw, 48px); line-height: 1.05; letter-spacing: -0.02em;
+    }
+    .stack-header .h-section .accent { color: var(--teal-light); font-style: italic; }
+    .stack-header .right {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 17px; line-height: 1.55; color: var(--soft);
+      border-left: 1px solid var(--rule); padding-left: 28px;
+    }
+
+    .pillar-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    @media (max-width: 880px) { .pillar-grid { grid-template-columns: 1fr; } }
+
+    .pillar {
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 32px 30px 28px;
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    .pillar.tint-1 { background: linear-gradient(180deg, rgba(58,168,158,0.10) 0%, var(--paper) 60%); }
+    .pillar.tint-2 { background: linear-gradient(180deg, rgba(184,137,58,0.10) 0%, var(--paper) 60%); }
+    .pillar.tint-3 { background: linear-gradient(180deg, rgba(42,63,95,0.10) 0%, var(--paper) 60%); }
+    .pillar.tint-4 { background: linear-gradient(180deg, rgba(196,130,138,0.10) 0%, var(--paper) 60%); }
+
+    .pillar-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted); font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .pillar-title {
+      font-family: "Fraunces", serif; font-weight: 400;
+      font-size: 30px; line-height: 1.1; letter-spacing: -0.015em;
+      color: var(--ink); margin-bottom: 6px;
+    }
+    .pillar-sub {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px; letter-spacing: 0.06em;
+      color: var(--teal-deep); font-weight: 500;
+      margin-bottom: 22px;
+    }
+    .pillar-price {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 28px; font-weight: 600; letter-spacing: -0.01em;
+      color: var(--ink); margin-bottom: 4px;
+    }
+    .pillar-price .per { font-size: 13px; font-weight: 400; color: var(--muted); letter-spacing: 0.04em; }
+    .pillar-price-note {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.04em;
+      color: var(--gold); font-weight: 500;
+      margin-bottom: 22px;
+    }
+    .pillar-promise {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 16px; line-height: 1.5;
+      color: var(--ink-soft);
+      padding: 16px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 22px;
+    }
+    .pillar-list {
+      list-style: none; padding: 0; margin: 0 0 22px;
+    }
+    .pillar-list li {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px; line-height: 1.55; color: var(--soft);
+      padding: 6px 0 6px 18px; position: relative;
+    }
+    .pillar-list li::before {
+      content: "→"; position: absolute; left: 0; top: 6px;
+      color: var(--teal-deep); font-weight: 500;
+    }
+    .pillar-tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px;
+    }
+    .pillar-tag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.08em;
+      padding: 5px 10px;
+      background: rgba(20,20,20,0.06);
+      color: var(--ink-soft);
+      border: 1px solid var(--rule);
+    }
+    .pillar-proof {
+      margin-top: auto;
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 13px; line-height: 1.5; color: var(--soft);
+      padding-top: 16px; border-top: 1px dashed var(--rule);
+    }
+    .pillar-proof strong { font-style: normal; font-weight: 500; color: var(--ink); }
+
+    /* ============== ARK Engine flagship ============== */
+    .engine {
+      margin-top: 48px;
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 56px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 720px) { .engine { padding: 40px 26px; } }
+
+    .engine::before {
+      content: ''; position: absolute; top: -120px; right: -120px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(212,168,90,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .engine-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold-soft); font-weight: 600;
+      padding: 7px 14px; border: 1px solid var(--gold-soft);
+      margin-bottom: 24px;
+    }
+    .engine-title {
+      font-family: "Fraunces", serif; font-weight: 300;
+      font-size: clamp(38px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.02em;
+      color: var(--paper); margin-bottom: 12px;
+    }
+    .engine-title .accent { color: var(--gold-soft); font-style: italic; }
+    .engine-sub {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 20px; line-height: 1.45;
+      color: rgba(250,248,244,0.78); margin-bottom: 36px;
+      max-width: 620px;
+    }
+    .engine-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start;
+    }
+    @media (max-width: 880px) { .engine-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    .engine-price-block {
+      border: 1px solid rgba(250,248,244,0.18);
+      padding: 28px 26px;
+      background: rgba(250,248,244,0.04);
+    }
+    .engine-price {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 44px; font-weight: 600; letter-spacing: -0.01em;
+      color: var(--gold-soft); line-height: 1;
+      margin-bottom: 6px;
+    }
+    .engine-price .per { font-size: 14px; font-weight: 400; color: rgba(250,248,244,0.6); letter-spacing: 0.04em; }
+    .engine-savings {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--gold-soft);
+      margin-bottom: 20px;
+    }
+    .engine-compare {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px; line-height: 1.7; color: rgba(250,248,244,0.7);
+      padding-top: 18px;
+      border-top: 1px solid rgba(250,248,244,0.18);
+    }
+    .engine-compare .row { display: flex; justify-content: space-between; padding: 4px 0; }
+    .engine-compare .row .num { color: var(--paper); font-weight: 500; }
+
+    .engine-includes-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold-soft); font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .engine-list {
+      list-style: none; padding: 0; margin: 0 0 22px;
+    }
+    .engine-list li {
+      font-family: "Fraunces", serif;
+      font-size: 17px; line-height: 1.55;
+      color: rgba(250,248,244,0.88);
+      padding: 8px 0 8px 24px; position: relative;
+      border-bottom: 1px solid rgba(250,248,244,0.10);
+    }
+    .engine-list li:last-child { border-bottom: 0; }
+    .engine-list li::before {
+      content: "+"; position: absolute; left: 0; top: 8px;
+      color: var(--gold-soft); font-weight: 500; font-size: 18px;
+    }
+    .engine-list li strong { font-weight: 500; color: var(--paper); font-style: italic; }
+
+    /* ============== Terms ============== */
+    .terms {
+      background: var(--paper-warm);
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 64px 0;
+    }
+    .terms-header { margin-bottom: 40px; }
+    .terms-eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--teal-deep); font-weight: 500; margin-bottom: 14px;
+    }
+    .terms-title {
+      font-family: "Fraunces", serif; font-weight: 400;
+      font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; letter-spacing: -0.015em;
+    }
+    .terms-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+    }
+    @media (max-width: 720px) { .terms-grid { grid-template-columns: 1fr; } }
+    .term-item {
+      background: var(--paper);
+      border: 1px solid var(--rule-strong);
+      padding: 22px 24px;
+    }
+    .term-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--teal-deep); font-weight: 600; margin-bottom: 8px;
+    }
+    .term-body {
+      font-family: "Fraunces", serif;
+      font-size: 16px; line-height: 1.5; color: var(--ink-soft);
+    }
+    .term-body strong { font-weight: 500; color: var(--ink); }
+
+    /* ============== Footer ============== */
+    .footer {
+      padding: 80px 0 64px;
+      text-align: center;
+    }
+    .footer .h-section {
+      font-family: "Fraunces", serif; font-weight: 400;
+      font-size: clamp(30px, 4vw, 44px); line-height: 1.08; letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .footer .h-section .accent { color: var(--teal-deep); font-style: italic; }
+    .footer-note {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-size: 17px; color: var(--soft);
+      max-width: 560px; margin: 0 auto 14px;
+    }
+    .footer-meta {
+      margin-top: 38px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .footer-meta a { color: var(--teal-deep); }
+  </style>
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="header">
+  <div class="container">
+    <div class="eyebrow">[ARK Partners] — Offer Sheet · Internal v1</div>
+    <h1 class="h-display">The ARK <span class="accent">Stack.</span></h1>
+    <p class="lede">Four numbers we move in your business. Five ways to get started. Cynthia powers all of it.</p>
+    <div class="meta">
+      <span>Audience: <strong>Founders &amp; Operators</strong></span>
+      <span>Foundation: <strong>Included in every package</strong></span>
+      <span>Setup fees: <strong>None</strong></span>
+      <span>Commitment: <strong>3-month min</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============== FOUNDATION NOTE ============== -->
+<section class="foundation-note">
+  <div class="container">
+    <div class="inner">
+      <div class="label">Run Smarter is the bedrock</div>
+      <div class="body">
+        <strong>Every ARK package includes the Run Smarter Foundation</strong> — Company Brain, AI Employee in Slack, Daily Morning Brief, Dashboard, and a dedicated Slack channel with the ARK team. The other pillars layer growth on top.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PILLAR GRID ============== -->
+<section class="stack">
+  <div class="container">
+    <div class="stack-header">
+      <h2 class="h-section">Four pillars. <span class="accent">Pick one, or run them all.</span></h2>
+      <div class="right">Each pillar solves a specific bottleneck in your business. Buy one to fix what's broken. Buy them all and save with The ARK Engine.</div>
+    </div>
+
+    <div class="pillar-grid">
+
+      <!-- PILLAR 01 — RUN SMARTER -->
+      <div class="pillar tint-1">
+        <div class="pillar-num">[ 01 ] · Foundation</div>
+        <h3 class="pillar-title">Run Smarter</h3>
+        <div class="pillar-sub">Your AI brain, installed.</div>
+        <div class="pillar-price">$2,000<span class="per"> / mo</span></div>
+        <div class="pillar-price-note">First month: $1,500 · Save $500</div>
+        <div class="pillar-promise">"Get your company brain installed and an AI employee in your Slack. Eliminate the busywork drowning your team."</div>
+        <ul class="pillar-list">
+          <li><strong>AI Employee in your Slack</strong> — Cynthia drafts, researches, schedules, analyzes — voice notes, text, anything.</li>
+          <li><strong>Company Brain</strong> — every SOP, contract, brand doc, and customer loaded for the whole team.</li>
+          <li><strong>Daily Morning Brief</strong> — one recommendation per day: where to spend, what to stop, what's working.</li>
+          <li><strong>Cynthia Dashboard</strong> — your data in one place, AI-recommended actions surfaced.</li>
+          <li><strong>Data Source Connections</strong> — Google, Slack, CRM, analytics, ads.</li>
+          <li><strong>Initial AI Audit</strong> — week-one analysis of where AI moves your needle.</li>
+        </ul>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Cynthia Chat</span>
+          <span class="pillar-tag">MCP Brain</span>
+          <span class="pillar-tag">Morning Brief</span>
+          <span class="pillar-tag">Dashboard</span>
+        </div>
+        <div class="pillar-proof"><strong>Beverly Hills Naturopathic</strong> — 10+ hrs/week saved, HIPAA-compliant. Jason's team — 50% of stud players' time recovered. A full FTE without hiring.</div>
+      </div>
+
+      <!-- PILLAR 02 — GET FOUND -->
+      <div class="pillar tint-2">
+        <div class="pillar-num">[ 02 ] · Visibility</div>
+        <h3 class="pillar-title">Get Found</h3>
+        <div class="pillar-sub">Be visible. Rank higher. Get traffic.</div>
+        <div class="pillar-price">$2,000<span class="per"> / mo</span></div>
+        <div class="pillar-price-note">Includes Run Smarter Foundation</div>
+        <div class="pillar-promise">"Be the answer when your customers search. Show up on page one for the searches that drive your business — including AI answer engines."</div>
+        <ul class="pillar-list">
+          <li><strong>Google Business Profile</strong> — claim, verify, fully optimized.</li>
+          <li><strong>Local SEO audit + on-page optimization</strong> for the keywords that drive your sales.</li>
+          <li><strong>Generative Engine Optimization (GEO)</strong> — show up in ChatGPT, Perplexity, Claude answers.</li>
+          <li><strong>Citation building</strong> — 50+ directories: Yelp, BBB, Apple Maps, Bing, industry-specific.</li>
+          <li><strong>Review automation</strong> — Cynthia prompts happy customers post-purchase.</li>
+          <li><strong>Monthly visibility report</strong> inside your Run Smarter dashboard.</li>
+        </ul>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Local SEO</span>
+          <span class="pillar-tag">GEO</span>
+          <span class="pillar-tag">GBP</span>
+          <span class="pillar-tag">Citations</span>
+          <span class="pillar-tag">Reviews</span>
+        </div>
+        <div class="pillar-proof"><strong>Sides BBQ &amp; Catering</strong> — 40-year-old company never ranked on Google. We got them to page one for their local searches. <strong>Affextionate Cuizine</strong> — Atlanta catering, full Google SEO + booking pipeline.</div>
+      </div>
+
+      <!-- PILLAR 03 — GET LEADS -->
+      <div class="pillar tint-3">
+        <div class="pillar-num">[ 03 ] · Acquisition</div>
+        <h3 class="pillar-title">Get Leads</h3>
+        <div class="pillar-sub">Fill the pipeline with real buyers.</div>
+        <div class="pillar-price">$3,000<span class="per"> / mo</span></div>
+        <div class="pillar-price-note">Includes Run Smarter Foundation</div>
+        <div class="pillar-promise">"Stop your ad spend from bleeding. Fund the funnel with real buyers, not tire-kickers."</div>
+        <ul class="pillar-list">
+          <li><strong>Full ad audit</strong> — Meta, Google, LinkedIn. What to kill, what to scale.</li>
+          <li><strong>Campaign restructuring</strong> — AI-powered audience targeting and lookalike modeling.</li>
+          <li><strong>Creative direction + AI ad copy</strong> generation, tested and iterated weekly.</li>
+          <li><strong>Cold outbound</strong> — Cynthia Reach builds personalized LinkedIn and email sequences at scale.</li>
+          <li><strong>Lead enrichment</strong> — ICP qualification so you only talk to real buyers.</li>
+          <li><strong>Weekly performance review</strong> with Cynthia-generated recommendations.</li>
+        </ul>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Cynthia Reach</span>
+          <span class="pillar-tag">Meta Ads</span>
+          <span class="pillar-tag">Google Ads</span>
+          <span class="pillar-tag">Outbound</span>
+          <span class="pillar-tag">Enrichment</span>
+        </div>
+        <div class="pillar-proof"><strong>Sereia Official</strong> — 0.09x ROAS jewelry brand → profitable in 48 hours. <strong>Legal Halp</strong> — $17.95 cost per qualified lead. <strong>PE Recruiting Firm</strong> — 30+ executive candidates in 24 hours.</div>
+      </div>
+
+      <!-- PILLAR 04 — CONVERT EVERY LEAD -->
+      <div class="pillar tint-4">
+        <div class="pillar-num">[ 04 ] · Conversion</div>
+        <h3 class="pillar-title">Convert Every Lead</h3>
+        <div class="pillar-sub">AI SDR · Under-60s response · Closed.</div>
+        <div class="pillar-price">$2,500<span class="per"> / mo</span></div>
+        <div class="pillar-price-note">Includes Run Smarter Foundation</div>
+        <div class="pillar-promise">"Your AI SDR responds to every lead in under 60 seconds. Qualifies, books the call, sends the proposal. You just show up to close."</div>
+        <ul class="pillar-list">
+          <li><strong>AI SDR (Cynthia Reach)</strong> — responds to every inbound lead in under 60 seconds. Never sleeps.</li>
+          <li><strong>Lead qualification flows</strong> — right questions, scored leads, buyers separated from tire-kickers.</li>
+          <li><strong>AI booking</strong> — qualified leads go straight to your calendar; unqualified routed gracefully.</li>
+          <li><strong>AI proposal generation</strong> — Cynthia drafts proposals based on the call. You send, you close.</li>
+          <li><strong>Cynthia Meet</strong> — meeting intelligence, real-time coaching, follow-up emails, CRM sync.</li>
+          <li><strong>Conversion analytics</strong> — every lead tracked from inquiry to close.</li>
+        </ul>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Cynthia Reach</span>
+          <span class="pillar-tag">Cynthia Meet</span>
+          <span class="pillar-tag">AI SDR</span>
+          <span class="pillar-tag">AI Proposals</span>
+        </div>
+        <div class="pillar-proof"><strong>Affextionate Cuizine</strong> — $48K active pipeline, every inquiry handled in &lt;60s. <strong>Philly Basketball</strong> — 200+ kids enrolled, 562 messages automated. <strong>Conscious Counsel</strong> — full AI SDR + Meta ads engine.</div>
+      </div>
+
+    </div>
+
+    <!-- ============== THE ARK ENGINE — FLAGSHIP ============== -->
+    <div class="engine">
+      <div class="engine-badge">★ The Flagship · Recommended</div>
+      <h2 class="engine-title">The ARK <span class="accent">Engine.</span></h2>
+      <p class="engine-sub">All four pillars. One connected system. Found → Leads → Converted → Smarter, every day, automated.</p>
+
+      <div class="engine-grid">
+        <div>
+          <div class="engine-includes-label">[ Includes every pillar ]</div>
+          <ul class="engine-list">
+            <li><strong>Run Smarter</strong> — Company Brain, AI employee in Slack, Morning Brief, dashboard, full team enablement.</li>
+            <li><strong>Get Found</strong> — Local SEO, GEO, GBP, citations, reviews.</li>
+            <li><strong>Get Leads</strong> — Ad optimization, AI outbound, lead enrichment.</li>
+            <li><strong>Convert Every Lead</strong> — AI SDR, booking, proposals, Cynthia Meet.</li>
+            <li><strong>Cross-pillar coordination</strong> — every system feeding every other system. Compounding.</li>
+            <li><strong>Priority support</strong> — direct access to Joshua, Ricki &amp; Chad in your dedicated channel.</li>
+          </ul>
+        </div>
+
+        <div class="engine-price-block">
+          <div class="engine-price">$5,500<span class="per"> / mo</span></div>
+          <div class="engine-savings">Save $2,000+ vs. à la carte</div>
+          <div class="engine-compare">
+            <div class="row"><span>Get Found + Get Leads + Convert (à la carte)</span><span class="num">$7,500/mo</span></div>
+            <div class="row"><span>The ARK Engine (all 4 pillars)</span><span class="num">$5,500/mo</span></div>
+            <div class="row" style="border-top: 1px dashed rgba(250,248,244,0.2); padding-top: 8px; margin-top: 8px;"><span>You save</span><span class="num" style="color: var(--gold-soft);">$2,000/mo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== UNIVERSAL TERMS ============== -->
+<section class="terms">
+  <div class="container">
+    <div class="terms-header">
+      <div class="terms-eyebrow">Universal · Every Package</div>
+      <h2 class="terms-title">How we work together.</h2>
+    </div>
+    <div class="terms-grid">
+      <div class="term-item">
+        <div class="term-label">Commitment</div>
+        <div class="term-body"><strong>3-month minimum.</strong> We recommend 90 days minimum to see the engine fully working. Chad has flexibility to adjust based on fit.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Setup Fees</div>
+        <div class="term-body"><strong>None.</strong> Zero onboarding fees, zero implementation costs. You pay the first month and we get to work.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Run Smarter Foundation</div>
+        <div class="term-body"><strong>Included in every package.</strong> Company Brain, AI Employee in Slack, Morning Brief, dashboard — universal across the stack.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Slack Channel</div>
+        <div class="term-body"><strong>Dedicated channel with the ARK team</strong> for support, optimization, and direct access. Every package, every client.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">First-Month Trial</div>
+        <div class="term-body"><strong>$1,500 first month on Run Smarter</strong> (save $500). Get the foundation installed and running before month two.</div>
+      </div>
+      <div class="term-item">
+        <div class="term-label">Enterprise / Custom</div>
+        <div class="term-body"><strong>Full Cynthia Deployment</strong> available for $5M+ businesses. Custom-scoped, dedicated AI employee, bespoke integrations. Quoted on call.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <h2 class="h-section">The next step is <span class="accent">the audit.</span></h2>
+    <p class="footer-note">Every prospect starts with the Free Business Audit. Scorecard across all four pillars. Identifies the bottleneck. Pre-frames the call.</p>
+    <div class="footer-meta">
+      ARK Partners · <a href="mailto:hello@arkpartners.ai">hello@arkpartners.ai</a> · arkpartners.ai
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
